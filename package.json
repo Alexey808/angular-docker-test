@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "docker build -t angualr-test:dev .",
+    "dev": "docker build -t angular-test:dev .",
     "watch": "docker run -v ${PWD}:/app -v /app/node_modules -p 4201:4200 --name angular-test --rm angualr-test:dev",
     "watch2": "sh -ac 'docker/watch.sh'",
-    "watch3": "docker run docker/watch.sh bash"
+    "watch3": "docker run -w /docker/watch.sh bash"
   },
   "private": true,
   "dependencies": {

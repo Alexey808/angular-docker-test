@@ -3,7 +3,7 @@ FROM node:13
 
 # set working directory
 WORKDIR /app
-
+#CMD ["ls", "./app"]
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
@@ -16,4 +16,4 @@ RUN npm install -g @angular/cli
 COPY . /app
 
 # start app
-# CMD ng serve --host 0.0.0.0
+CMD ng serve --host 0.0.0.0
