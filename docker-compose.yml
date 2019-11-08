@@ -1,0 +1,23 @@
+version: "3"
+services:
+  angular-test:
+    container_name: angular-test
+    image: node:13
+    volumes:
+      - ./:/app
+    ports:
+      - '4201:4200'
+    command: sh -c "cd ./docker/watch.sh"
+    restart: always
+
+#  cm2-postgre:
+#    container_name: cm2-postgre
+#    image: postgres:9.6.6
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=password
+#      - POSTGRES_DB=cm2
+#    ports:
+#      - "5449:5432"
+#    logging:
+#      driver: none
