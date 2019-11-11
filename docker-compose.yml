@@ -4,10 +4,10 @@ services:
     container_name: angular-test
     image: node:13
     volumes:
-      - ./:/app
+      - .:/app
     ports:
       - '4201:4200'
-    command: sh -c "cd ./docker/watch.sh"
+    command: app/docker/watch.sh
     restart: always
 
 #  cm2-postgre:

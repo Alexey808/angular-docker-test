@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "docker": "docker compose up",
     "dev": "docker build -t angular-test:dev .",
     "watch": "docker run -v ${PWD}:/app -v /app/node_modules -p 4201:4200 --name angular-test --rm angualr-test:dev",
     "watch2": "sh -ac 'docker/watch.sh'",
